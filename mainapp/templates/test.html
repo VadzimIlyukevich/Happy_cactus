@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="full_name" id="full_name">
+    <input type="file" name="photo" id="photo">
+    <button type="submit" class="btn btn-primary" id="sendMessageButton">Отправить Заявку</button>
+</form>
+</body>
+</html>
