@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
+{% if user.is_authenticated %}
+    <h1>{{user.username}}</h1>
+    <h3>{{user.email}}</h3>
+    <h5>{{user.last_login}}</h5>
+{% else %}
+    <h2>Who are you? <br>I didn't call you?<br> Go fuck</h2>
+{% endif %}
 {% endblock content %}
