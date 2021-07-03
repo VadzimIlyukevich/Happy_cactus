@@ -12,6 +12,7 @@ urlpatterns = [
     path('token/obtain', jwt_views.TokenObtainPairView.as_view(), name='token_create'),
     path('token/refresh', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     path('register', CreateUser.as_view(), name="create_user"),
+    path('login', LoginUser.as_view(), name="login_user"),
     path('logout', LogoutUser.as_view(), name="logout_user"),
 ]
 urlpatterns += router.urls

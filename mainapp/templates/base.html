@@ -56,17 +56,16 @@
             <a class="nav-link" href="#">Search</a>
             <li class="nav-item">
             <a class="nav-link" href="{% url 'about' %}">About us</a>
-                          <li class="nav-item">
+                      {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_pot' %}">Your pot</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout'%}">Logout</a></li>
+                      {% else %}
+          <li class="nav-item">
                 <a class="nav-link" href="{% url 'sign_in' %}">Sign in</a>
-                          <li class="nav-item">
-                <a class="nav-link" href="user_pot"></a>
-<!--            {% if user.is_authenticated %}-->
-
-<!--            {% else %}-->
-
-<!--            {% endif %}-->
-
           </li>
+                      {% endif %}
         </ul>
       </div>
     </div>

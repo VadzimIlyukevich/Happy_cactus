@@ -10,6 +10,7 @@ urlpatterns = [
     path('search/', SearchView.as_view(), name='search'),
     path('sign_in/', SignIn.as_view(), name='sign_in'),
     path('sign_up/', SignUp.as_view(), name='sign_up'),
+    path('logout/', Logout.as_view(), name='logout'),
     path('user_pot/', user_pot, name='user_pot'),
     path('joke/', joke, name='joke'),
     url('', include('social_django.urls', namespace='social')),

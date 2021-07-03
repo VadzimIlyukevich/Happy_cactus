@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import status, viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -85,4 +84,9 @@ class CreateUser(APIView):
 class LogoutUser(APIView):
     def get(self, request):
         request.user.auth_token.delete()
+        return Response(status=status.HTTP_200_OK)
+
+
+class LoginUser(APIView):
+    def post(self, request):
         return Response(status=status.HTTP_200_OK)
